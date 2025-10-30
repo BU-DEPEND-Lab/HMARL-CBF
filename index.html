@@ -50,8 +50,12 @@
           <a class="navbar-item" href="https://openreview.net/forum?id=fcLVqvyiqV&referrer=%5Bthe%20profile%20of%20H%20M%20Sabbir%20Ahmad%5D(%2Fprofile%3Fid%3D~H_M_Sabbir_Ahmad1)">
             Paper (OpenReview PDF)
           </a>
-          <a class="navbar-item" href="https://realm.mit.edu">MIT REALM</a>
-          <a class="navbar-item" href="https://sites.bu.edu/depend/">BU Depend Lab</a>
+          <a class="navbar-item" href="https://realm.mit.edu">
+            MIT REALM
+          </a>
+          <a class="navbar-item" href="https://sites.bu.edu/depend/">
+            BU Depend Lab
+          </a>
         </div>
       </div>
     </div>
@@ -82,6 +86,7 @@
             <span class="author-block"><sup>1</sup>Boston University &nbsp;&nbsp; <sup>2</sup>Massachusetts Institute of Technology</span>
           </div>
 
+          <!-- Links -->
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
@@ -97,13 +102,13 @@
             </div>
           </div>
 
-        </div>
-      </div>
-    </div>
-  </div>
+        </div> <!-- column -->
+      </div> <!-- columns -->
+    </div> <!-- container -->
+  </div> <!-- hero-body -->
 </section>
 
-<!-- Teaser / Media -->
+<!-- Teaser / GIF -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -144,31 +149,61 @@
 <!-- Problem / Method -->
 <section class="section">
   <div class="container is-max-desktop">
+    <!-- Problem Setting -->
     <h2 class="title is-3">Problem Setting</h2>
     <div class="columns is-vcentered">
-      <div class="column is-half">
-        <img src="./figs/problem_setting.jpg" class="center-image" style="max-width:100%;" alt="Problem setting">
-      </div>
       <div class="column">
-        <p>
-          We consider a cooperative multi-agent system under partial observability with pointwise-in-time
-          safety constraints. The objective is to optimize task performance while ensuring safety between
-          agents and with the environment at all times. Control Barrier Functions provide forward-invariance
-          guarantees for safety sets even under decentralized execution.
-        </p>
+        <div class="content has-text-justified">
+          <p>
+            We consider the multi-agent constrained optimal control problem with
+            <b>discrete-time</b>, <b>unknown dynamics</b>, <b>partial observability</b>, <b>input constraints</b>,
+            and <b>without</b> a known performant nominal policy. Given \(N\) agents, we aim to design
+            distributed policies \(\pi_1, \dots, \pi_N\), such that:
+          </p>
+          <p style="margin-top: 1em;">
+            The task is done:
+          </p>
+          <p>
+            \[
+            \min_{\pi_1,\dots,\pi_N} \sum_{k=0}^{\infty} l(\mathbf{x}^k, \boldsymbol{\pi}(\mathbf{x}^k)),
+            \]
+          </p>
+          <p>
+            following the unknown dynamics:
+          </p>
+          <p>
+            \[
+            \mathbf{x}^{k+1} = f(\mathbf{x}^k, \boldsymbol{\pi}(\mathbf{x}^k)),
+            \]
+          </p>
+          <p>
+            and the agents are safe:
+          </p>
+          <p>
+            \[
+            h_i^{(m)}(o_i^k) \le 0, \quad o_i^k = O_i(\mathbf{x}^k).
+            \]
+          </p>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <img src="./figs/problem_setting.jpg" alt="Problem setting" style="max-width:100%;">
       </div>
     </div>
 
+    <!-- HMARL-CBF Overview -->
     <h2 class="title is-3">HMARL-CBF Overview</h2>
     <div class="content">
-      <img src="./figs/architecture.jpg" class="center-image" style="width:90%;" alt="Algorithm structure">
-      <p>
+      <!-- show PDF inline -->
+      <embed src="./figs/block_diagram.pdf" type="application/pdf" style="width:100%; height:600px; border-radius:8px;">
+      <p style="margin-top:1rem;">
         The high-level policy selects skills for agents (CTDE), while the low-level CBF-based controller
         executes skills safely via a per-step QP with affine CBF constraints (and optional CLF terms).
         This combines sample efficiency, decentralized execution, and pointwise safety guarantees.
       </p>
     </div>
 
+    <!-- Results -->
     <h2 class="title is-3">Results</h2>
     <div class="column">
       <div class="content">
@@ -186,6 +221,20 @@
         <b>Efficiency:</b> Improved time and energy metrics vs. strong baselines.
       </p>
     </div>
+  </div>
+</section>
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+<pre><code>@article{ahmad2025hmarlcbf,
+  title={Hierarchical Multi-Agent Reinforcement Learning with Control Barrier Functions for Safety-Critical Autonomous Systems},
+  author={Ahmad, H. M. Sabbir and Sabouni, Ehsan and Wasilkoff, Alexander and Budhraja, Param and Guo, Zijian and Zhang, Songyuan and Fan, Chuchu and Cassandras, Christos and Li, Wenchao},
+  journal={arXiv preprint arXiv:2507.14850},
+  year={2025},
+  url={https://arxiv.org/abs/2507.14850v2}
+}</code></pre>
   </div>
 </section>
 
