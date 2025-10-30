@@ -17,8 +17,6 @@
 
   <!-- Site CSS -->
   <link rel="stylesheet" href="./static/css/index.css" />
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="./static/images/favicon.png" />
 
   <!-- JS -->
@@ -45,9 +43,7 @@
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">More Research</a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://openreview.net/forum?id=fcLVqvyiqV&referrer=%5Bthe%20profile%20of%20H%20M%20Sabbir%20Ahmad%5D(%2Fprofile%3Fid%3D~H_M_Sabbir_Ahmad1)">
-            Paper (OpenReview PDF)
-          </a>
+          <a class="navbar-item" href="https://openreview.net/forum?id=fcLVqvyiqV&referrer=%5Bthe%20profile%20of%20H%20M%20Sabbir%20Ahmad%5D(%2Fprofile%3Fid%3D~H_M_Sabbir_Ahmad1)">Paper (OpenReview PDF)</a>
           <a class="navbar-item" href="https://realm.mit.edu">MIT REALM</a>
           <a class="navbar-item" href="https://sites.bu.edu/depend/">BU Depend Lab</a>
         </div>
@@ -95,14 +91,13 @@
               </span>
             </div>
           </div>
-
-        </div> <!-- column -->
-      </div> <!-- columns -->
-    </div> <!-- container -->
-  </div> <!-- hero-body -->
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Teaser / GIF -->
+<!-- Teaser -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body" style="padding-top: 1rem; padding-bottom: 2rem;">
@@ -143,12 +138,9 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3">Problem Definition</h2>
     <div class="columns is-vcentered" style="margin-top: 1rem;">
-      <!-- LEFT: figure -->
       <div class="column is-5">
-        <!-- make sure this exists: ./figs/problem_definition.png -->
         <img src="./figs/problem_definition.png" alt="Problem Definition" style="width:100%; border-radius:8px;">
       </div>
-      <!-- RIGHT: text -->
       <div class="column">
         <div class="content has-text-justified">
           <p>
@@ -185,11 +177,10 @@
       </div>
     </div>
 
-    <!-- HMARL-CBF Overview -->
+    <!-- Overview -->
     <h2 class="title is-3" style="margin-top: 2.5rem;">HMARL-CBF Overview</h2>
     <div class="content" style="margin-top: 0.5rem; margin-bottom: 0;">
-      <!-- change to .jpg/.webp if that's what you have -->
-      <img src="./figs/Block_Diagram.png" alt="HMARL-CBF block diagram" style="width:100%; border-radius:8px; margin:0;">
+      <img src="./figs/Block_Diagram.png" alt="HMARL-CBF block diagram" style="width:100%; border-radius:8px;">
       <p style="margin-top: 0.75rem; text-align: justify;">
         The high-level policy selects skills for agents (CTDE), while the low-level CBF-based controller executes
         skills safely via a per-step QP with affine CBF constraints (and optional CLF terms). This combines sample
@@ -197,27 +188,26 @@
       </p>
     </div>
 
-    <!-- Results (restored) -->
+    <!-- Results -->
     <h2 class="title is-3" style="margin-top: 3rem;">Results</h2>
     <div class="columns">
       <div class="column">
         <div class="content">
-          <img src="./figs/main_success.jpg" class="center-image" style="width:100%;" alt="Success / Safety">
+          <img src="./figs/Merged_Success_Rate.png" class="center-image" style="width:100%;" alt="Success Rate Results">
         </div>
         <p class="has-text-centered">
-          <b>Success / Safety:</b> HMARL-CBF achieves near-perfect rates across mixed traffic and LiDAR environments.
+          <b>Success Rate:</b> HMARL-CBF achieves high task completion and safety consistency across environments.
         </p>
       </div>
       <div class="column">
         <div class="content">
-          <img src="./figs/main_efficiency.jpg" class="center-image" style="width:100%;" alt="Efficiency metrics">
+          <img src="./figs/Merged_Episode_Length.png" class="center-image" style="width:100%;" alt="Episode Length Results">
         </div>
         <p class="has-text-centered">
-          <b>Efficiency:</b> Lower time-to-goal and better energy / comfort vs. baselines.
+          <b>Episode Length:</b> Efficient convergence with reduced completion times compared to baselines.
         </p>
       </div>
     </div>
-
   </div>
 </section>
 
