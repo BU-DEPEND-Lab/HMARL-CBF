@@ -64,7 +64,7 @@
 
 <!-- Title + Authors -->
 <section class="hero">
-  <div class="hero-body">
+  <div class="hero-body" style="padding-bottom: 2.5rem;">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
@@ -82,12 +82,12 @@
             <span class="author-block"><a href="https://christosgcassandras.org/">Christos Cassandras</a><sup>1</sup>,</span>
             <span class="author-block"><a href="https://sites.bu.edu/depend/">Wenchao Li</a><sup>1</sup></span>
           </div>
-          <div class="is-size-5 publication-authors">
+          <div class="is-size-5 publication-authors" style="margin-top: .4rem;">
             <span class="author-block"><sup>1</sup>Boston University &nbsp;&nbsp; <sup>2</sup>Massachusetts Institute of Technology</span>
           </div>
 
           <!-- Links -->
-          <div class="column has-text-centered">
+          <div class="column has-text-centered" style="margin-top: 1.5rem;">
             <div class="publication-links">
               <span class="link-block">
                 <a href="https://arxiv.org/pdf/2507.14850v2.pdf" class="external-link button is-normal is-rounded is-dark">
@@ -111,12 +111,10 @@
 <!-- Teaser / GIF -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="title is-3"><center>HMARL-CBF: Hierarchical skills with CBF-backed safety.</center></h2>
-      <div class="hero-body">
-        <center>
-          <img src="./figs/metadrive.gif" alt="HMARL-CBF MetaDrive Environments" style="width:80%; border-radius:10px;">
-        </center>
+    <div class="hero-body" style="padding-top: 1rem; padding-bottom: 2rem;">
+      <h2 class="title is-3 has-text-centered">HMARL-CBF: Hierarchical skills with CBF-backed safety.</h2>
+      <div class="has-text-centered" style="margin-top: 1rem;">
+        <img src="./figs/metadrive.gif" alt="HMARL-CBF MetaDrive Environments" style="width:80%; border-radius:10px;">
       </div>
     </div>
   </div>
@@ -147,7 +145,7 @@
 </section>
 
 <!-- Problem / Method -->
-<section class="section">
+<section class="section" style="padding-top: 3rem;">
   <div class="container is-max-desktop">
     <!-- Problem Setting -->
     <h2 class="title is-3">Problem Setting</h2>
@@ -192,11 +190,11 @@
     </div>
 
     <!-- HMARL-CBF Overview -->
-    <h2 class="title is-3">HMARL-CBF Overview</h2>
-    <div class="content">
-      <!-- show PDF inline -->
-      <embed src="./figs/Block_Diagram.png" type="application/pdf" style="width:100%; height:600px; border-radius:8px;">
-      <p style="margin-top:1rem;">
+    <h2 class="title is-3" style="margin-top: 2.5rem;">HMARL-CBF Overview</h2>
+    <div class="content" style="margin-top: 0.5rem; margin-bottom: 0;">
+      <!-- make sure this file exists: ./figs/block_diagram.png -->
+      <img src="./figs/block_diagram.png" alt="HMARL-CBF block diagram" style="width:100%; border-radius:8px; margin:0;">
+      <p style="margin-top: 0.75rem; text-align: justify;">
         The high-level policy selects skills for agents (CTDE), while the low-level CBF-based controller
         executes skills safely via a per-step QP with affine CBF constraints (and optional CLF terms).
         This combines sample efficiency, decentralized execution, and pointwise safety guarantees.
@@ -204,28 +202,30 @@
     </div>
 
     <!-- Results -->
-    <h2 class="title is-3">Results</h2>
-    <div class="column">
-      <div class="content">
-        <img src="./figs/main_success.jpg" class="center-image" style="width:80%;" alt="Success rates">
+    <h2 class="title is-3" style="margin-top: 3rem;">Results</h2>
+    <div class="columns">
+      <div class="column">
+        <div class="content">
+          <img src="./figs/main_success.jpg" class="center-image" style="width:100%;" alt="Success rates">
+        </div>
+        <p class="has-text-centered">
+          <b>Success/Safety:</b> HMARL-CBF achieves near-perfect rates across traffic scenarios and lidar suites.
+        </p>
       </div>
-      <p class="has-text-centered">
-        <b>Success/Safety:</b> HMARL-CBF achieves near-perfect rates across traffic scenarios and lidar suites.
-      </p>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="./figs/main_efficiency.jpg" class="center-image" style="width:80%;" alt="Efficiency metrics">
+      <div class="column">
+        <div class="content">
+          <img src="./figs/main_efficiency.jpg" class="center-image" style="width:100%;" alt="Efficiency metrics">
+        </div>
+        <p class="has-text-centered">
+          <b>Efficiency:</b> Improved time and energy metrics vs. strong baselines.
+        </p>
       </div>
-      <p class="has-text-centered">
-        <b>Efficiency:</b> Improved time and energy metrics vs. strong baselines.
-      </p>
     </div>
   </div>
 </section>
 
 <!-- BibTeX -->
-<section class="section" id="BibTeX">
+<section class="section" id="BibTeX" style="padding-top: 2rem;">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
 <pre><code>@article{ahmad2025hmarlcbf,
