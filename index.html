@@ -1,11 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HMARL-CBF – Hierarchical Multi-Agent Reinforcement Learning with Control Barrier Functions for Safety-Critical Autonomous</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="HMARL-CBF – Hierarchical Multi-Agent Reinforcement Learning with Control Barrier Functions for Safety-Critical Autonomous Systems" />
+  <meta name="keywords" content="Multi-Agent Systems, Reinforcement Learning, Hierarchical RL, Safe Control, Control Barrier Functions, CTDE" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HMARL-CBF</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
+
+  <!-- Bulma + Icons -->
+  <link rel="stylesheet" href="./static/css/bulma.min.css" />
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="./static/css/index.css" />
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" type="image/svg+xml" href="./static/images/favicon.svg" />
+  <link rel="icon" type="image/png" href="./static/images/favicon.png" />
+
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
 </head>
 <body>
-  <h1>HMARL-CBF – Hierarchical Multi-Agent Reinforcement Learning with Control Barrier Functions for Safety-Critical Autonomous</h1>
+
+<!-- Navbar -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://sabbirahmad26.github.io/">
+        <span class="icon"><i class="fas fa-home"></i></span>
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">More Research</a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://mit-realm.github.io/def-marl/">Def-MARL</a>
+          <a class="navbar-item" href="https://mit-realm.github.io/gcbfplus/">GCBF+</a>
+          <a class="navbar-item" href="https://mit-realm.github.io/gcbf-website/">GCBFv0</a>
+          <a class="navbar-item" href="https://arxiv.org/abs/2311.13714">Safe Control Survey (Multi-Robot)</a>
+          <a class="navbar-item" href="https://realm.mit.edu">MIT REALM</a>
+          <a class="navbar-item" href="https://sites.bu.edu/rastic/">BU RASTIC Lab</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Title + Authors -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            Hierarchical Multi-Agent Reinforcement Learning with Control Barrier Functions for Safety-Critical Autonomous Systems
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://sabbirahmad26.github.io/">H. M. Sabbir Ahmad</a><sup>1</sup>,</span>
+            <span class="author-block">Ehsan Sabouni<sup>1</sup>,</span>
+            <span class="author-block">Alexander Wasilkoff<sup>1</sup>,</span>
+            <span class="author-block">Param Budhraja<sup>1</sup>,</span>
+            <span class="author-block">Zijian Guo<sup>1</sup>,</span>
+            <span class="author-block"><a href="https://syzhang092218-source.github.io/">Songyuan Zhang</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="http://chuchu.mit.edu/">Chuchu Fan</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://sites.bu.edu/cassandraslab/christos-g-cassandras/">Christos Cassandras</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://people.bu.edu/wenchenl/">Wenchao Li</a><sup>1</sup></span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Boston University &nbsp;&nbsp; <sup>2</sup>Massachusetts Institute of Technology</span>
+          </div>
+
+          <!-- Links -->
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2507.14850v2.pdf" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper (PDF)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2507.14850v2" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span>
+                </a>
+              </span>
+              <!-- Optional: add video buttons later
+              <span class="link-block">
+                <a href="https://youtu.be/..." class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-youtube"></i></span><span>Video</span>
+                </a>
+              </span>
+              -->
+              <!-- Code repo (add when public) -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/your-org/hmarl-cbf" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span><span>Code</span>
+                </a>
+              </span> -->
+              <!-- Project page (this site) -->
+              <span class="link-block">
+                <a href="https://sabbirahmad26.github.io/HMARL-CBF.github.io/" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-link"></i></span><span>Project Page</span>
+                </a>
+              </span>
+            </div>
+          </div>
+
+        </div> <!-- column -->
+      </div> <!-- columns -->
+    </div> <!-- container -->
+  </div> <!-- hero-body -->
+</section>
+
+<!-- Teaser / Media -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3"><center>HMARL-CBF: Hierarchical skills with CBF-backed safety.</center></h2>
+      <div class="hero-body">
+        <center>
+          <!-- Replace these with your own demo videos or gifs -->
+          <video width="24%" autoplay muted loop controls>
+            <source src="./videos/merging.mp4" type="video/mp4" />
+          </video>
+          <video width="24%" autoplay muted loop controls>
+            <source src="./videos/bottleneck.mp4" type="video/mp4" />
+          </video>
+          <video width="24%" autoplay muted loop controls>
+            <source src="./videos/roundabout.mp4" type="video/mp4" />
+          </video>
+          <video width="24%" autoplay muted loop controls>
+            <source src="./videos/tollgate.mp4" type="video/mp4" />
+          </video>
+        </center>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Abstract -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We address the problem of safe policy learning in multi-agent safety-critical autonomous systems,
+            where each agent must satisfy safety requirements at all times while cooperating to accomplish
+            the task. We propose a safe Hierarchical Multi-Agent Reinforcement Learning (HMARL) approach
+            based on Control Barrier Functions (CBFs). Our hierarchical method decomposes the problem into
+            two levels: a high-level policy that learns joint cooperative behavior over skills/options, and
+            a low-level policy that executes those skills safely with CBFs. We validate our approach on
+            challenging scenarios in which many agents must safely navigate conflicting road networks.
+            Compared with state-of-the-art methods, HMARL-CBF achieves near-perfect (≥ 95%) success/safety
+            rates while also improving performance across environments.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Problem / Method -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Problem Setting</h2>
+    <div class="columns is-vcentered">
+      <div class="column is-half">
+        <img src="./figs/problem_setting.jpg" class="center-image" style="max-width:100%;" alt="Problem setting">
+      </div>
+      <div class="column">
+        <p>
+          We consider a cooperative multi-agent system under partial observability with pointwise-in-time
+          safety constraints. The objective is to optimize task performance while ensuring safety between
+          agents and with the environment at all times. Control Barrier Functions provide forward-invariance
+          guarantees for safety sets even under decentralized execution.
+        </p>
+      </div>
+    </div>
+
+    <h2 class="title is-3">HMARL-CBF Overview</h2>
+    <div class="content">
+      <img src="./figs/architecture.jpg" class="center-image" style="width:90%;" alt="Algorithm structure">
+      <p>
+        The high-level policy selects skills for agents (CTDE), while the low-level CBF-based controller
+        executes skills safely via a per-step QP with affine CBF constraints (and optional CLF terms).
+        This combines sample efficiency, decentralized execution, and pointwise safety guarantees.
+      </p>
+    </div>
+
+    <h2 class="title is-3">Simulation Environments</h2>
+    <div class="content">
+      <div class="has-text-centered">
+        <img src="./figs/metadrive_grid.jpg" style="width:24%;" alt="Merging">
+        <img src="./figs/metadrive_roundabout.jpg" style="width:24%;" alt="Roundabout">
+        <img src="./figs/metadrive_intersection.jpg" style="width:24%;" alt="Intersection">
+        <img src="./figs/metadrive_bottleneck.jpg" style="width:24%;" alt="Bottleneck">
+      </div>
+      <p class="has-text-centered">
+        MetaDrive environments with dense multi-agent interactions; agents must coordinate safely to reach goals.
+      </p>
+      <div class="has-text-centered">
+        <img src="./figs/lidar_target.jpg" style="width:24%;" alt="Target">
+        <img src="./figs/lidar_spread.jpg" style="width:24%;" alt="Spread">
+        <img src="./figs/lidar_bicycle.jpg" style="width:24%;" alt="Target-Bicycle">
+      </div>
+      <p class="has-text-centered">
+        Lidar-based partially observable tasks (Target, Spread, Target-Bicycle) to test robustness and scalability.
+      </p>
+    </div>
+
+    <h2 class="title is-3">Results</h2>
+    <div class="column">
+      <div class="content">
+        <img src="./figs/main_success.jpg" class="center-image" style="width:80%;" alt="Success rates">
+      </div>
+      <p class="has-text-centered">
+        <b>Success/Safety:</b> HMARL-CBF achieves near-perfect rates across traffic scenarios and lidar suites.
+      </p>
+    </div>
+    <div class="column">
+      <div class="content">
+        <img src="./figs/main_efficiency.jpg" class="center-image" style="width:80%;" alt="Efficiency metrics">
+      </div>
+      <p class="has-text-centered">
+        <b>Efficiency:</b> Improved time and energy metrics vs. strong baselines.
+      </p>
+    </div>
+
+    <h2 class="title is-3">Related Work</h2>
+    <div class="content has-text-justified">
+      <p>
+        Our approach connects hierarchical MARL (skills/options) with CBF-based safety to provide
+        decentralized guarantees under partial observability. It builds on safe control with CBFs and
+        CTDE MARL, and complements alternatives such as CMDP-based methods which enforce safety
+        statistically over trajectories rather than pointwise in time.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+<pre><code>@article{ahmad2025hmarlcbf,
+  title={Hierarchical Multi-Agent Reinforcement Learning with Control Barrier Functions for Safety-Critical Autonomous Systems},
+  author={Ahmad, H. M. Sabbir and Sabouni, Ehsan and Wasilkoff, Alexander and Budhraja, Param and Guo, Zijian and Zhang, Songyuan and Fan, Chuchu and Cassandras, Christos and Li, Wenchao},
+  journal={arXiv preprint arXiv:2507.14850},
+  year={2025},
+  url={https://arxiv.org/abs/2507.14850v2}
+}</code></pre>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            This website is licensed under a
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            Template adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> — thanks to <a href="https://keunhong.com/">Keunhong Park</a> for open-sourcing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- (Optional) Enable Bulma components if needed
+<script src="./static/js/bulma-carousel.min.js"></script>
+<script src="./static/js/bulma-slider.min.js"></script>
+<script src="./static/js/index.js"></script>
+-->
+
 </body>
 </html>
