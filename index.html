@@ -12,15 +12,9 @@
 
   <!-- Bulma + Icons -->
   <link rel="stylesheet" href="./static/css/bulma.min.css" />
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
-
-  <!-- Site CSS -->
   <link rel="stylesheet" href="./static/css/index.css" />
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="./static/images/favicon.png" />
 
   <!-- JS -->
@@ -50,12 +44,8 @@
           <a class="navbar-item" href="https://openreview.net/forum?id=fcLVqvyiqV&referrer=%5Bthe%20profile%20of%20H%20M%20Sabbir%20Ahmad%5D(%2Fprofile%3Fid%3D~H_M_Sabbir_Ahmad1)">
             Paper (OpenReview PDF)
           </a>
-          <a class="navbar-item" href="https://realm.mit.edu">
-            MIT REALM
-          </a>
-          <a class="navbar-item" href="https://sites.bu.edu/depend/">
-            BU Depend Lab
-          </a>
+          <a class="navbar-item" href="https://realm.mit.edu">MIT REALM</a>
+          <a class="navbar-item" href="https://sites.bu.edu/depend/">BU Depend Lab</a>
         </div>
       </div>
     </div>
@@ -101,14 +91,13 @@
               </span>
             </div>
           </div>
-
-        </div> <!-- column -->
-      </div> <!-- columns -->
-    </div> <!-- container -->
-  </div> <!-- hero-body -->
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Teaser / GIF -->
+<!-- Teaser -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body" style="padding-top: 1rem; padding-bottom: 2rem;">
@@ -144,82 +133,21 @@
   </div>
 </section>
 
-<!-- Problem / Method -->
+<!-- Problem Definition -->
 <section class="section" style="padding-top: 3rem;">
   <div class="container is-max-desktop">
-    <!-- Problem Setting -->
-    <h2 class="title is-3">Problem Setting</h2>
-    <div class="columns is-vcentered">
-      <div class="column">
-        <div class="content has-text-justified">
-          <p>
-            We consider the multi-agent constrained optimal control problem with
-            <b>discrete-time</b>, <b>unknown dynamics</b>, <b>partial observability</b>, <b>input constraints</b>,
-            and <b>without</b> a known performant nominal policy. Given \(N\) agents, we aim to design
-            distributed policies \(\pi_1, \dots, \pi_N\), such that:
-          </p>
-          <p style="margin-top: 1em;">
-            The task is done:
-          </p>
-          <p>
-            \[
-            \min_{\pi_1,\dots,\pi_N} \sum_{k=0}^{\infty} l(\mathbf{x}^k, \boldsymbol{\pi}(\mathbf{x}^k)),
-            \]
-          </p>
-          <p>
-            following the unknown dynamics:
-          </p>
-          <p>
-            \[
-            \mathbf{x}^{k+1} = f(\mathbf{x}^k, \boldsymbol{\pi}(\mathbf{x}^k)),
-            \]
-          </p>
-          <p>
-            and the agents are safe:
-          </p>
-          <p>
-            \[
-            h_i^{(m)}(o_i^k) \le 0, \quad o_i^k = O_i(\mathbf{x}^k).
-            \]
-          </p>
-        </div>
-      </div>
-      <div class="column is-one-third">
-        <img src="./figs/problem_setting.jpg" alt="Problem setting" style="max-width:100%;">
-      </div>
+    <h2 class="title is-3">Problem Definition</h2>
+    <div class="content" style="margin-top: 1rem;">
+      <img src="./figs/problem_definition.png" alt="Problem Definition" style="width:65%; display:block; margin-left:0; margin-right:auto; border-radius:8px;">
     </div>
 
-    <!-- HMARL-CBF Overview -->
+    <!-- Overview -->
     <h2 class="title is-3" style="margin-top: 2.5rem;">HMARL-CBF Overview</h2>
     <div class="content" style="margin-top: 0.5rem; margin-bottom: 0;">
-      <!-- make sure this file exists: ./figs/block_diagram.png -->
       <img src="./figs/block_diagram.png" alt="HMARL-CBF block diagram" style="width:100%; border-radius:8px; margin:0;">
       <p style="margin-top: 0.75rem; text-align: justify;">
-        The high-level policy selects skills for agents (CTDE), while the low-level CBF-based controller
-        executes skills safely via a per-step QP with affine CBF constraints (and optional CLF terms).
-        This combines sample efficiency, decentralized execution, and pointwise safety guarantees.
+        The high-level policy selects skills for agents (CTDE), while the low-level CBF-based controller executes skills safely via a per-step QP with affine CBF constraints (and optional CLF terms). This combines sample efficiency, decentralized execution, and pointwise safety guarantees.
       </p>
-    </div>
-
-    <!-- Results -->
-    <h2 class="title is-3" style="margin-top: 3rem;">Results</h2>
-    <div class="columns">
-      <div class="column">
-        <div class="content">
-          <img src="./figs/main_success.jpg" class="center-image" style="width:100%;" alt="Success rates">
-        </div>
-        <p class="has-text-centered">
-          <b>Success/Safety:</b> HMARL-CBF achieves near-perfect rates across traffic scenarios and lidar suites.
-        </p>
-      </div>
-      <div class="column">
-        <div class="content">
-          <img src="./figs/main_efficiency.jpg" class="center-image" style="width:100%;" alt="Efficiency metrics">
-        </div>
-        <p class="has-text-centered">
-          <b>Efficiency:</b> Improved time and energy metrics vs. strong baselines.
-        </p>
-      </div>
     </div>
   </div>
 </section>
